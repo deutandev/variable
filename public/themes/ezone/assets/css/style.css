@@ -4493,7 +4493,7 @@ a.icon-cart-furniture span.green {
     color: #00245b;
 }
 .slider-height-6 {
-    min-height: 790px;
+    /* min-height: 790px; */
 }
 .furniture-content h2 {
     font-size: 72px;
