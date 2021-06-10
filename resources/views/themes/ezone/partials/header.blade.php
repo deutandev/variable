@@ -5,14 +5,14 @@
 			<div class="header-bottom-wrapper">
 				<div class="logo-2 furniture-logo ptb-30">
 					<a href="/">
-						<img src="{{ asset('themes/ezone/assets/img/logo/2.png') }}" alt="">
+						<img src="{{ asset('themes/ezone/assets/img/logo/2.png') }}" style="max-width:300px" alt="">
 					</a>
 				</div>
 				<div class="menu-style-2 furniture-menu menu-hover">
 					<nav>
 						<ul>
-							<li><a href="/">home</a>
-								<ul class="single-dropdown">
+							<li><a href="/">Home</a>
+								<!-- <ul class="single-dropdown">
 									<li><a href="index.html">Fashion</a></li>
 									<li><a href="index-fashion-2.html">Fashion style 2</a></li>
 									<li><a href="index-fruits.html">fruits</a></li>
@@ -24,9 +24,9 @@
 									<li><a href="index-handicraft.html">handicraft</a></li>
 									<li><a target="_blank" href="index-smart-watch.html">smart watch</a></li>
 									<li><a href="index-sports.html">sports</a></li>
-								</ul>
+								</ul> -->
 							</li>
-							<li><a href="#">pages</a>
+							<!-- <li><a href="#">pages</a>
 								<ul class="single-dropdown">
 									<li><a href="about-us.html">about us</a></li>
 									<li><a href="menu-list.html">menu list</a></li>
@@ -37,9 +37,9 @@
 									<li><a href="wishlist.html">wishlist</a></li>
 									<li><a href="contact.html">contact</a></li>
 								</ul>
-							</li>
-							<li><a href="{{ url('products') }}">shop</a>
-								<div class="category-menu-dropdown shop-menu">
+							</li> -->
+							<li><a href="{{ url('products') }}">Product</a>
+								<!-- <div class="category-menu-dropdown shop-menu">
 									<div class="category-dropdown-style category-common2 mb-30">
 										<h4 class="categories-subtitle"> shop layout</h4>
 										<ul>
@@ -73,9 +73,9 @@
 											<img src="{{ asset('themes/ezone/assets/img/banner/18.jpg') }}" alt="">
 										</a>
 									</div>
-								</div>
+								</div> -->
 							</li>
-							<li><a href="blog.html">blog</a>
+							<!-- <li><a href="blog.html">blog</a>
 								<ul class="single-dropdown">
 									<li><a href="blog.html">blog 3 colunm</a></li>
 									<li><a href="blog-2-col.html">blog 2 colunm</a></li>
@@ -83,8 +83,8 @@
 									<li><a href="blog-details.html">blog details</a></li>
 									<li><a href="blog-details-sidebar.html">blog details 2</a></li>
 								</ul>
-							</li>
-							<li><a href="contact.html">contact</a></li>
+							</li> -->
+							<li><a href="#footer">Kontak</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -95,8 +95,8 @@
 					<div class="mobile-menu">
 						<nav id="mobile-menu-active">
 							<ul class="menu-overflow">
-								<li><a href="#">HOME</a>
-									<ul>
+								<li><a href="/">HOME</a>
+									<!-- <ul>
 										<li><a href="index.html">Fashion</a></li>
 										<li><a href="index-fashion-2.html">Fashion style 2</a></li>
 										<li><a href="index-fruits.html">Fruits</a></li>
@@ -108,9 +108,9 @@
 										<li><a href="index-handicraft.html">handicraft</a></li>
 										<li><a href="index-smart-watch.html">smart watch</a></li>
 										<li><a href="index-sports.html">sports</a></li>
-									</ul>
+									</ul> -->
 								</li>
-								<li><a href="#">pages</a>
+								<!-- <li><a href="#">pages</a>
 									<ul>
 										<li><a href="about-us.html">about us</a></li>
 										<li><a href="menu-list.html">menu list</a></li>
@@ -121,9 +121,9 @@
 										<li><a href="wishlist.html">wishlist</a></li>
 										<li><a href="contact.html">contact</a></li>
 									</ul>
-								</li>
-								<li><a href="#">shop</a>
-									<ul>
+								</li> -->
+								<li><a href="{{ url('products') }}">Product</a>
+									<!-- <ul>
 										<li><a href="shop-grid-2-col.html"> grid 2 column</a></li>
 										<li><a href="shop-grid-3-col.html"> grid 3 column</a></li>
 										<li><a href="shop.html">grid 4 column</a></li>
@@ -140,9 +140,9 @@
 										<li><a href="product-details-7.html">gallery style 2</a></li>
 										<li><a href="product-details-8.html">fixed image style</a></li>
 										<li><a href="product-details-9.html">fixed image style 2</a></li>
-									</ul>
+									</ul> -->
 								</li>
-								<li><a href="#">BLOG</a>
+								<!-- <li><a href="#">BLOG</a>
 									<ul>
 										<li><a href="blog.html">blog 3 colunm</a></li>
 										<li><a href="blog-2-col.html">blog 2 colunm</a></li>
@@ -150,8 +150,8 @@
 										<li><a href="blog-details.html">blog details</a></li>
 										<li><a href="blog-details-sidebar.html">blog details 2</a></li>
 									</ul>
-								</li>
-								<li><a href="contact.html"> Contact  </a></li>
+								</li> -->
+								<li><a href="#footer">Kontak</a></li>
 							</ul>
 						</nav>							
 					</div>

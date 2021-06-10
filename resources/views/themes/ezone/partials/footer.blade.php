@@ -1,10 +1,10 @@
 <!-- footer area start -->
-<footer class="footer-area">
+<footer id="footer" class="footer-area">
     <div class="footer-top-area pt-70 pb-35 wrapper-padding-5">
         <div class="container-fluid">
             <div class="widget-wrapper">
                 <div class="footer-widget mb-30">
-                    <a href="#"><img src="{{ asset('themes/ezone/assets/img/logo/2.png') }}" alt=""></a>
+                    <a href="#"><img src="{{ asset('themes/ezone/assets/img/logo/2.png') }}" style="max-width:300px" alt=""></a>
                     <div class="footer-about-2">
                         <p>There are many variations of passages of Lorem Ipsum <br>the majority have suffered alteration in some form, by <br> injected humour</p>
                     </div>
