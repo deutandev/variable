@@ -29,7 +29,7 @@ class SlideRequest extends FormRequest
 		];
 
 		if ($this->method() == 'POST') {
-			$rules['image'] = 'required|image|mimes:jpeg,png,jpg,gif|max:4096';
+			$rules['image'] = 'required|image|mimes:jpeg,png,jpg,gif|max:40096';
 		}
 
 		return $rules;
