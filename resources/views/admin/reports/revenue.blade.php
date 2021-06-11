@@ -16,7 +16,7 @@
 								<th>Date</th>
 								<th>Orders</th>
 								<th>Gross Revenue</th>
-								<th>Taxes</th>
+								{{-- <th>Taxes</th> --}}
 								<th>Shipping</th>
 								<th>Net Revenue</th>
 							</thead>
@@ -24,7 +24,7 @@
 								@php
 									$totalOrders = 0;
 									$totalGrossRevenue = 0;
-									$totalTaxesAmount = 0;
+									// $totalTaxesAmount = 0;
 									$totalShippingAmount = 0;
 									$totalNetRevenue = 0;
 								@endphp
@@ -35,7 +35,7 @@
 											<a href="{{ url('admin/orders?start='. $revenue->date .'&end='. $revenue->date . '&status=completed') }}">{{ $revenue->num_of_orders }}</a>
 										</td>
 										<td>{{ \General::priceFormat($revenue->gross_revenue) }}</td>
-										<td>{{ \General::priceFormat($revenue->taxes_amount) }}</td>
+										{{-- <td>{{ \General::priceFormat($revenue->taxes_amount) }}</td> --}}
 										<td>{{ \General::priceFormat($revenue->shipping_amount) }}</td>
 										<td>{{ \General::priceFormat($revenue->net_revenue) }}</td>
 									</tr>
@@ -43,13 +43,13 @@
 									@php
 										$totalOrders += $revenue->num_of_orders;
 										$totalGrossRevenue += $revenue->gross_revenue;
-										$totalTaxesAmount += $revenue->taxes_amount;
+										// $totalTaxesAmount += $revenue->taxes_amount;
 										$totalShippingAmount += $revenue->shipping_amount;
 										$totalNetRevenue += $revenue->net_revenue;
 									@endphp
 								@empty
 									<tr>
-										<td colspan="6">No records found</td>
+										<td colspan="6">Data tidak ditemukan</td>
 									</tr>
 								@endforelse
 								
@@ -58,7 +58,7 @@
 										<td>Total</td>
 										<td><strong>{{ $totalOrders }}</strong></td>
 										<td><strong>{{ \General::priceFormat($totalGrossRevenue) }}</strong></td>
-										<td><strong>{{ \General::priceFormat($totalTaxesAmount) }}</strong></td>
+										{{-- <td><strong>{{ \General::priceFormat($totalTaxesAmount) }}</strong></td> --}}
 										<td><strong>{{ \General::priceFormat($totalShippingAmount) }}</strong></td>
 										<td><strong>{{ \General::priceFormat($totalNetRevenue) }}</strong></td>
 									</tr>

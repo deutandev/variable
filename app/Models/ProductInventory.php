@@ -49,7 +49,7 @@ class ProductInventory extends Model
 			throw new \App\Exceptions\OutOfStockException('The product '. $product->sku .' is out of stock');
 		}
 
-		$inventory->qty = $inventory->qty - $qty;
+		$inventory->qty = 100;
 		$inventory->save();
 	}
 
@@ -64,7 +64,7 @@ class ProductInventory extends Model
 	public static function increaseStock($productId, $qty)
 	{
 		$inventory = self::where('product_id', $productId)->firstOrFail();
-		$inventory->qty = $inventory->qty + $qty;
+		$inventory->qty = 100;
 		$inventory->save();
 	}
 }

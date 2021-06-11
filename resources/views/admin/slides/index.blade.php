@@ -54,7 +54,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="6">No records found</td>
+                                        <td colspan="6">Data tidak ditemukan</td>
                                     </tr>
                                 @endforelse
                             </tbody>

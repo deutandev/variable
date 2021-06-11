@@ -2,14 +2,14 @@
 
 @section('content')
 	<!-- header end -->
-	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/breadcrumb.jpg') }})">
+	<div class="p-5 judul" >
 		<div class="container">
 			<div class="breadcrumb-content text-center">
-				<h2>Order Received</h2>
-				<ul>
+				<h2>Pesanan Diterima</h2>
+				{{-- <ul>
 					<li><a href="{{ url('/') }}">home</a></li>
 					<li>Order Received</li>
-				</ul>
+				</ul> --}}
 			</div>
 		</div>
 	</div>
@@ -19,7 +19,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					@include('admin.partials.flash', ['$errors' => $errors])
-					<h1 class="cart-heading">Your Order:</h4>
+					<h1 class="cart-heading">Pesanan Anda:</h4>
 					<div class="row">
 						<div class="col-xl-3 col-lg-4">
 							<p class="text-dark mb-2" style="font-weight: normal; font-size:16px; text-transform: uppercase;">Billing Address</p>
@@ -28,8 +28,8 @@
 								<br> {{ $order->customer_address1 }}
 								<br> {{ $order->customer_address2 }}
 								<br> Email: {{ $order->customer_email }}
-								<br> Phone: {{ $order->customer_phone }}
-								<br> Postcode: {{ $order->customer_postcode }}
+								<br> Telp./WA: {{ $order->customer_phone }}
+								<br> Kode Pos: {{ $order->customer_postcode }}
 							</address>
 						</div>
 						<div class="col-xl-3 col-lg-4">
@@ -39,8 +39,8 @@
 								<br> {{ $order->shipment->address1 }}
 								<br> {{ $order->shipment->address2 }}
 								<br> Email: {{ $order->shipment->email }}
-								<br> Phone: {{ $order->shipment->phone }}
-								<br> Postcode: {{ $order->shipment->postcode }}
+								<br> Telp./WA: {{ $order->shipment->phone }}
+								<br> Kode Pos: {{ $order->shipment->postcode }}
 							</address>
 						</div>
 						<div class="col-xl-3 col-lg-4">
@@ -50,8 +50,8 @@
 								<span class="text-dark">#{{ $order->code }}</span>
 								<br> {{ \General::datetimeFormat($order->order_date) }}
 								<br> Status: {{ $order->status }}
-								<br> Payment Status: {{ $order->payment_status }}
-								<br> Shipped by: {{ $order->shipping_service_name }}
+								<br> Status Pembayaran: {{ $order->payment_status }}
+								<br>  Jasa Pengiriman : {{ $order->shipping_service_name }}
 							</address>
 						</div>
 					</div>
@@ -61,9 +61,9 @@
 								<tr>
 									<th>#</th>
 									<th>Item</th>
-									<th>Description</th>
-									<th>Quantity</th>
-									<th>Unit Cost</th>
+									<th>Descripsin</th>
+									<th>Jumlah</th>
+									<th>Harga item</th>
 									<th>Total</th>
 								</tr>
 							</thead>
@@ -89,13 +89,13 @@
 						<div class="col-md-5 ml-auto">
 							<div class="cart-page-total">
 								<ul>
-									<li> Subtotal
+									{{-- <li> Subtotal
 										<span>{{ \General::priceFormat($order->base_total_price) }}</span>
 									</li>
 									<li>Tax (10%)
 										<span>{{ \General::priceFormat($order->tax_amount) }}</span>
-									</li>
-									<li>Shipping Cost
+									</li> --}}
+									<li>Ongkos Kirim
 										<span>{{ \General::priceFormat($order->shipping_cost) }}</span>
 									</li>
 									<li>Total

@@ -11,7 +11,7 @@
 				<div class="menu-style-2 furniture-menu menu-hover">
 					<nav>
 						<ul>
-							<li><a href="/">home</a>
+							<li><a href="/">beranda</a>
 								<ul class="single-dropdown">
 									<li><a href="index.html">Fashion</a></li>
 									<li><a href="index-fashion-2.html">Fashion style 2</a></li>
@@ -26,7 +26,7 @@
 									<li><a href="index-sports.html">sports</a></li>
 								</ul>
 							</li>
-							<li><a href="#">pages</a>
+							{{-- <li><a href="#">pages</a>
 								<ul class="single-dropdown">
 									<li><a href="about-us.html">about us</a></li>
 									<li><a href="menu-list.html">menu list</a></li>
@@ -37,9 +37,9 @@
 									<li><a href="wishlist.html">wishlist</a></li>
 									<li><a href="contact.html">contact</a></li>
 								</ul>
-							</li>
-							<li><a href="{{ url('products') }}">shop</a>
-								<div class="category-menu-dropdown shop-menu">
+							</li> --}}
+							<li><a href="{{ url('products') }}">produk</a>
+								{{-- <div class="category-menu-dropdown shop-menu">
 									<div class="category-dropdown-style category-common2 mb-30">
 										<h4 class="categories-subtitle"> shop layout</h4>
 										<ul>
@@ -73,18 +73,18 @@
 											<img src="{{ asset('themes/ezone/assets/img/banner/18.jpg') }}" alt="">
 										</a>
 									</div>
-								</div>
+								</div> --}}
 							</li>
-							<li><a href="blog.html">blog</a>
-								<ul class="single-dropdown">
+							<li><a href="#footer">kontak</a>
+								{{-- <ul class="single-dropdown">
 									<li><a href="blog.html">blog 3 colunm</a></li>
 									<li><a href="blog-2-col.html">blog 2 colunm</a></li>
 									<li><a href="blog-sidebar.html">blog sidebar</a></li>
 									<li><a href="blog-details.html">blog details</a></li>
 									<li><a href="blog-details-sidebar.html">blog details 2</a></li>
-								</ul>
+								</ul> --}}
 							</li>
-							<li><a href="contact.html">contact</a></li>
+							{{-- <li><a href="contact.html">contact</a></li> --}}
 						</ul>
 					</nav>
 				</div>
@@ -96,7 +96,7 @@
 						<nav id="mobile-menu-active">
 							<ul class="menu-overflow">
 								<li><a href="#">HOME</a>
-									<ul>
+									{{-- <ul>
 										<li><a href="index.html">Fashion</a></li>
 										<li><a href="index-fashion-2.html">Fashion style 2</a></li>
 										<li><a href="index-fruits.html">Fruits</a></li>
@@ -108,10 +108,10 @@
 										<li><a href="index-handicraft.html">handicraft</a></li>
 										<li><a href="index-smart-watch.html">smart watch</a></li>
 										<li><a href="index-sports.html">sports</a></li>
-									</ul>
+									</ul> --}}
 								</li>
-								<li><a href="#">pages</a>
-									<ul>
+								<li><a href="{{ url('products') }}"> Produk </a>
+									{{-- <ul>
 										<li><a href="about-us.html">about us</a></li>
 										<li><a href="menu-list.html">menu list</a></li>
 										<li><a href="login.html">login</a></li>
@@ -120,9 +120,9 @@
 										<li><a href="checkout.html">checkout</a></li>
 										<li><a href="wishlist.html">wishlist</a></li>
 										<li><a href="contact.html">contact</a></li>
-									</ul>
+									</ul> --}}
 								</li>
-								<li><a href="#">shop</a>
+								{{-- <li><a href="#">shop</a>
 									<ul>
 										<li><a href="shop-grid-2-col.html"> grid 2 column</a></li>
 										<li><a href="shop-grid-3-col.html"> grid 3 column</a></li>
@@ -150,8 +150,8 @@
 										<li><a href="blog-details.html">blog details</a></li>
 										<li><a href="blog-details-sidebar.html">blog details 2</a></li>
 									</ul>
-								</li>
-								<li><a href="contact.html"> Contact  </a></li>
+								</li> --}}
+								<li><a href="#footer"> Kontak  </a></li>
 							</ul>
 						</nav>							
 					</div>
@@ -165,10 +165,10 @@
 				<div class="furniture-login">
 					<ul>
 						@guest
-							<li>Get Access: <a href="{{ url('login') }}">Login</a></li>
-							<li><a href="{{ url('register') }}">Register</a></li>
+							<li><a href="{{ url('login') }}">Masuk</a></li>
+							<li><a href="{{ url('register') }}">Daftar</a></li>
 						@else
-							<li>Hello: <a href="{{ url('profile') }}">{{ Auth::user()->first_name }}</a></li>
+							<li>Halo, <a href="{{ url('profile') }}">{{ Auth::user()->first_name }}</a></li>
 							<a href="{{ route('logout') }}"
 								onclick="event.preventDefault();
 											document.getElementById('logout-form').submit();">
@@ -183,17 +183,17 @@
 				</div>
 				<div class="furniture-search">
 					<form action="{{ url('products') }}" method="GET">
-						<input placeholder="I am Searching for . . ." type="text" name="q" value="{{ isset($q) ? $q : null }}">
+						<input placeholder="Cari produk . . ." type="text" name="q" value="{{ isset($q) ? $q : null }}">
 						<button>
 							<i class="ti-search"></i>
 						</button>
 					</form>
 				</div>
-				<div class="furniture-wishlist">
+				{{-- <div class="furniture-wishlist">
 					<ul>
 						<li><a href="{{ url('favorites') }}"><i class="ti-heart"></i> Favorites</a></li>
 					</ul>
-				</div>
+				</div> --}}
 			</div>
 		</div>
 	</div>

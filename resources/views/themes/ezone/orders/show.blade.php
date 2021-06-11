@@ -1,14 +1,14 @@
 @extends('themes.ezone.layout')
 
 @section('content')
-	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/breadcrumb.jpg') }})">
+	<div class="p-5 judul" >
 		<div class="container-fluid">
 			<div class="breadcrumb-content text-center">
-				<h2>My Favorites</h2>
-				<ul>
+				<h2>Pesanan Saya</h2>
+				{{-- <ul>
 					<li><a href="{{ url('/') }}">home</a></li>
 					<li>my favorites</li>
-				</ul>
+				</ul> --}}
 			</div>
 		</div>
 	</div>
@@ -20,7 +20,7 @@
 				</div>
 				<div class="col-lg-9">
 					<div class="d-flex justify-content-between">
-						<h2 class="text-dark font-weight-medium">Order ID #{{ $order->code }}</h2>
+						<h2 class="text-dark font-weight-medium">ID Pemesanan #{{ $order->code }}</h2>
 					</div>
 					<div class="row pt-5">
 						<div class="col-xl-4 col-lg-4">
@@ -30,8 +30,8 @@
 								<br> {{ $order->customer_address1 }}
 								<br> {{ $order->customer_address2 }}
 								<br> Email: {{ $order->customer_email }}
-								<br> Phone: {{ $order->customer_phone }}
-								<br> Postcode: {{ $order->customer_postcode }}
+								<br> Telp./WA{{ $order->customer_phone }}
+								<br> Kode Pos {{ $order->customer_postcode }}
 							</address>
 						</div>
 						@if ($order->shipment)
@@ -42,8 +42,8 @@
 									<br> {{ $order->shipment->address1 }}
 									<br> {{ $order->shipment->address2 }}
 									<br> Email: {{ $order->shipment->email }}
-									<br> Phone: {{ $order->shipment->phone }}
-									<br> Postcode: {{ $order->shipment->postcode }}
+									<br> Telp./WA{{ $order->shipment->phone }}
+									<br> Kode Pos {{ $order->shipment->postcode }}
 								</address>
 							</div>
 						@endif
@@ -54,10 +54,10 @@
 								<br> {{ \General::datetimeFormat($order->order_date) }}
 								<br> Status: {{ $order->status }} {{ $order->isCancelled() ? '('. \General::datetimeFormat($order->cancelled_at) .')' : null}}
 								@if ($order->isCancelled())
-									<br> Cancellation Note : {{ $order->cancellation_note}}
+									<br> Catatan pembatalan: {{ $order->cancellation_note}}
 								@endif
-								<br> Payment Status: {{ $order->payment_status }}
-								<br> Shipped by: {{ $order->shipping_service_name }}
+								<br> Status Pembayaran {{ $order->payment_status }}
+								<br> Jasa Pengiriman {{ $order->shipping_service_name }}
 							</address>
 						</div>
 					</div>
@@ -67,9 +67,9 @@
 								<tr>
 									<th>#</th>
 									<th>Item</th>
-									<th>Description</th>
-									<th>Quantity</th>
-									<th>Unit Cost</th>
+									<th>Descripsi</th>
+									<th>Jumlah</th>
+									<th>Harga unit</th>
 									<th>Total</th>
 								</tr>
 							</thead>
@@ -85,7 +85,7 @@
 									</tr>
 								@empty
 									<tr>
-										<td colspan="6">Order item not found!</td>
+										<td colspan="6">Item tidak ditemukan!</td>
 									</tr>
 								@endforelse
 							</tbody>

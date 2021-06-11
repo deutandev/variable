@@ -4,7 +4,7 @@
 <div class="content">
 	<div class="invoice-wrapper rounded border bg-white py-5 px-3 px-md-4 px-lg-5">
 		<div class="d-flex justify-content-between">
-			<h2 class="text-dark font-weight-medium">Order ID #{{ $order->code }}</h2>
+			<h2 class="text-dark font-weight-medium">ID Pemesanan #{{ $order->code }}</h2>
 			<div class="btn-group">
 				<button class="btn btn-sm btn-secondary">
 					<i class="mdi mdi-content-save"></i> Save</button>
@@ -20,8 +20,8 @@
 					<br> {{ $order->customer_address1 }}
 					<br> {{ $order->customer_address2 }}
 					<br> Email: {{ $order->customer_email }}
-					<br> Phone: {{ $order->customer_phone }}
-					<br> Postcode: {{ $order->customer_postcode }}
+					<br> Telp./WA{{ $order->customer_phone }}
+					<br> Kode Pos {{ $order->customer_postcode }}
 				</address>
 			</div>
 			<div class="col-xl-4 col-lg-4">
@@ -31,8 +31,8 @@
 					<br> {{ $order->shipment->address1 }}
 					<br> {{ $order->shipment->address2 }}
 					<br> Email: {{ $order->shipment->email }}
-					<br> Phone: {{ $order->shipment->phone }}
-					<br> Postcode: {{ $order->shipment->postcode }}
+					<br> Telp./WA{{ $order->shipment->phone }}
+					<br> Kode Pos {{ $order->shipment->postcode }}
 				</address>
 			</div>
 			<div class="col-xl-4 col-lg-4">
@@ -44,8 +44,8 @@
 					@if ($order->isCancelled())
 						<br> Cancellation Note : {{ $order->cancellation_note}}
 					@endif
-					<br> Payment Status: {{ $order->payment_status }}
-					<br> Shipped by: {{ $order->shipping_service_name }}
+					<br> Status Pembayaran {{ $order->payment_status }}
+					<br> Jasa Pengiriman {{ $order->shipping_service_name }}
 				</address>
 			</div>
 		</div>
@@ -86,7 +86,7 @@
 					<li class="mid pb-3 text-dark">Tax(10%)
 						<span class="d-inline-block float-right text-default">{{ \General::priceFormat($order->tax_amount) }}</span>
 					</li>
-					<li class="mid pb-3 text-dark">Shipping Cost
+					<li class="mid pb-3 text-dark">Ongkos Kirim
 						<span class="d-inline-block float-right text-default">{{ \General::priceFormat($order->shipping_cost) }}</span>
 					</li>
 					<li class="pb-3 text-dark">Total

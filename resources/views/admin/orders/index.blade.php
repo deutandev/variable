@@ -13,7 +13,7 @@
 						@include('admin.orders.filter')
 						<table class="table table-bordered table-striped">
 							<thead>
-								<th>Order ID</th>
+								<th>ID Pemesanan</th>
 								<th>Grand Total</th>
 								<th>Name</th>
 								<th>Status</th>
@@ -42,7 +42,7 @@
 									</tr>
 								@empty
 									<tr>
-										<td colspan="5">No records found</td>
+										<td colspan="5">Data tidak ditemukan</td>
 									</tr>
 								@endforelse
 							</tbody>

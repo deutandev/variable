@@ -94,8 +94,8 @@
 								<br> {{ $shipment->order->customer_address1 }}
 								<br> {{ $shipment->order->customer_address2 }}
 								<br> Email: {{ $shipment->order->customer_email }}
-								<br> Phone: {{ $shipment->order->customer_phone }}
-								<br> Postcode: {{ $shipment->order->customer_postcode }}
+								<br> Telp./WA{{ $shipment->order->customer_phone }}
+								<br> Kode Pos {{ $shipment->order->customer_postcode }}
 							</address>
 						</div>
 						<div class="col-xl-6 col-lg-6">
@@ -104,8 +104,8 @@
 								ID: <span class="text-dark">#{{ $shipment->order->code }}</span>
 								<br> {{ \General::datetimeFormat($shipment->order->order_date) }}
 								<br> Status: {{ $shipment->order->status }}
-								<br> Payment Status: {{ $shipment->order->payment_status }}
-								<br> Shipped by: {{ $shipment->order->shipping_service_name }}
+								<br> Status Pembayaran {{ $shipment->order->payment_status }}
+								<br> Jasa Pengiriman {{ $shipment->order->shipping_service_name }}
 							</address>
 						</div>
 					</div>
@@ -139,10 +139,10 @@
 								<li class="mid pb-3 text-dark">Subtotal
 									<span class="d-inline-block float-right text-default">{{ \General::priceFormat($shipment->order->base_total_price) }}</span>
 								</li>
-								<li class="mid pb-3 text-dark">Tax(10%)
+								{{-- <li class="mid pb-3 text-dark">Tax(10%)
 									<span class="d-inline-block float-right text-default">{{ \General::priceFormat($shipment->order->tax_amount) }}</span>
-								</li>
-								<li class="mid pb-3 text-dark">Shipping Cost
+								</li> --}}
+								<li class="mid pb-3 text-dark">Ongkos Kirim
 									<span class="d-inline-block float-right text-default">{{ \General::priceFormat($shipment->order->shipping_cost) }}</span>
 								</li>
 								<li class="pb-3 text-dark">Total

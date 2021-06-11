@@ -1,14 +1,14 @@
 @extends('themes.ezone.layout')
 
 @section('content')
-	<div class="breadcrumb-area pt-205 breadcrumb-padding pb-210" style="background-image: url({{ asset('themes/ezone/assets/img/bg/breadcrumb.jpg') }})">
+	<div class="p-5 judul" >
 		<div class="container-fluid">
 			<div class="breadcrumb-content text-center">
-				<h2>My Favorites</h2>
-				<ul>
+				<h2>Favorit</h2>
+				{{-- <ul>
 					<li><a href="{{ url('/') }}">home</a></li>
 					<li>my favorites</li>
-				</ul>
+				</ul> --}}
 			</div>
 		</div>
 	</div>
@@ -24,11 +24,11 @@
 						<div class="table-content table-responsive">
 							<table class="table table-bordered table-striped">
 								<thead>
-									<th>Order ID</th>
-									<th>Grand Total</th>
+									<th>ID Pemesanan</th>
+									<th>Total Biaya</th>
 									<th>Status</th>
-									<th>Payment</th>
-									<th>Action</th>
+									<th>Pembayaran</th>
+									<th>Aksi</th>
 								</thead>
 								<tbody>
 									@forelse ($orders as $order)
@@ -41,12 +41,12 @@
 											<td>{{ $order->status }}</td>
 											<td>{{ $order->payment_status }}</td>
 											<td>
-												<a href="{{ url('orders/'. $order->id) }}" class="btn btn-info btn-sm">details</a>
+												<a href="{{ url('orders/'. $order->id) }}" class="btn btn-info btn-sm">detail</a>
 											</td>
 										</tr>
 									@empty
 										<tr>
-											<td colspan="5">No records found</td>
+											<td colspan="5">Data tidak ditemukan</td>
 										</tr>
 									@endforelse
 								</tbody>

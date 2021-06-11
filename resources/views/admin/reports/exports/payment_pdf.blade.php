@@ -39,7 +39,7 @@
 		<table>
 			<thead>
 				<tr>
-					<th>Order ID</th>
+					<th>ID Pemesanan</th>
 					<th>Date</th>
 					<th>Status</th>
 					<th>Amount</th>

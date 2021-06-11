@@ -96,7 +96,7 @@ class CartController extends Controller
 			'id' => md5($product->id),
 			'name' => $product->name,
 			'price' => $product->price,
-			'quantity' => $params['qty'],
+			'quantity' => 1,
 			'attributes' => $attributes,
 			'associatedModel' => $product,
 		];
@@ -118,14 +118,14 @@ class CartController extends Controller
 	{
 		$items = \Cart::getContent();
 		$itemQuantity = 0;
-		if ($items) {
-			foreach ($items as $item) {
-				if ($item->id == $itemId) {
-					$itemQuantity = $item->quantity;
-					break;
-				}
-			}
-		}
+		// if ($items) {
+		// 	foreach ($items as $item) {
+		// 		if ($item->id == $itemId) {
+		// 			$itemQuantity = $item->quantity;
+		// 			break;
+		// 		}
+		// 	}
+		// }
 
 		return $itemQuantity;
 	}
@@ -140,9 +140,9 @@ class CartController extends Controller
 	 */
 	private function _checkProductInventory($product, $itemQuantity)
 	{
-		if ($product->productInventory->qty < $itemQuantity) {
-			throw new \App\Exceptions\OutOfStockException('The product '. $product->sku .' is out of stock');
-		}
+		// if ($product->productInventory->qty < $itemQuantity) {
+		// 	throw new \App\Exceptions\OutOfStockException('The product '. $product->sku .' is out of stock');
+		// }
 	}
 
 	/**

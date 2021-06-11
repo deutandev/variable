@@ -309,7 +309,7 @@ class OrderController extends Controller
 				'name' => 'TAX 10%',
 				'type' => 'tax',
 				'target' => 'total',
-				'value' => '10%',
+				'value' => '0%',
 			]
 		);
 
@@ -340,10 +340,11 @@ class OrderController extends Controller
 
 		if ($order) {
 			\Cart::clear();
-			$this->_sendEmailOrderReceived($order);
+			// $this->_sendEmailOrderReceived($order);
 
 			\Session::flash('success', 'Thank you. Your order has been received!');
 			return redirect('orders/received/'. $order->id);
+			// return redirect('https://wa.me/6285736497951?text=' . $order);
 		}
 
 		return redirect('orders/checkout');
@@ -388,6 +389,7 @@ class OrderController extends Controller
 			$order->payment_url = $snap->redirect_url;
 			$order->save();
 		}
+		// $order->save();
 	}
 
 	/**
@@ -409,7 +411,9 @@ class OrderController extends Controller
 		$shippingCost = $selectedShipping['cost'];
 		$discountAmount = 0;
 		$discountPercent = 0;
-		$grandTotal = ($baseTotalPrice + $taxAmount + $shippingCost) - $discountAmount;
+		// $grandTotal = ($baseTotalPrice + $taxAmount + $shippingCost) - $discountAmount;
+		$grandTotal = ($baseTotalPrice + $shippingCost) - $discountAmount;
+
 
 		$orderDate = date('Y-m-d H:i:s');
 		$paymentDue = (new \DateTime($orderDate))->modify('+7 day')->format('Y-m-d H:i:s');
@@ -431,9 +435,9 @@ class OrderController extends Controller
 			'note' => $params['note'],
 			'customer_first_name' => $params['first_name'],
 			'customer_last_name' => $params['last_name'],
-			'customer_company' => $params['company'],
+			'customer_company' => '',
 			'customer_address1' => $params['address1'],
-			'customer_address2' => $params['address2'],
+			'customer_address2' => '',
 			'customer_phone' => $params['phone'],
 			'customer_email' => $params['email'],
 			'customer_city_id' => $params['city_id'],
@@ -489,7 +493,7 @@ class OrderController extends Controller
 				$orderItem = OrderItem::create($orderItemParams);
 				
 				if ($orderItem) {
-					ProductInventory::reduceStock($orderItem->product_id, $orderItem->qty);
+					// ProductInventory::reduceStock($orderItem->product_id, $orderItem->qty);
 				}
 			}
 		}
@@ -507,9 +511,9 @@ class OrderController extends Controller
 	{
 		$shippingFirstName = isset($params['ship_to']) ? $params['shipping_first_name'] : $params['first_name'];
 		$shippingLastName = isset($params['ship_to']) ? $params['shipping_last_name'] : $params['last_name'];
-		$shippingCompany = isset($params['ship_to']) ? $params['shipping_company'] :$params['company'];
+		// $shippingCompany = '';
 		$shippingAddress1 = isset($params['ship_to']) ? $params['shipping_address1'] : $params['address1'];
-		$shippingAddress2 = isset($params['ship_to']) ? $params['shipping_address2'] : $params['address2'];
+		// $shippingAddress2 = isset($params['ship_to']) ? $params['shipping_address2'] : $params['address2'];
 		$shippingPhone = isset($params['ship_to']) ? $params['shipping_phone'] : $params['phone'];
 		$shippingEmail = isset($params['ship_to']) ? $params['shipping_email'] : $params['email'];
 		$shippingCityId = isset($params['ship_to']) ? $params['shipping_city_id'] : $params['city_id'];
@@ -525,7 +529,7 @@ class OrderController extends Controller
 			'first_name' => $shippingFirstName,
 			'last_name' => $shippingLastName,
 			'address1' => $shippingAddress1,
-			'address2' => $shippingAddress2,
+			// 'address2' => $shippingAddress2,
 			'phone' => $shippingPhone,
 			'email' => $shippingEmail,
 			'city_id' => $shippingCityId,
@@ -545,7 +549,7 @@ class OrderController extends Controller
 	 */
 	private function _sendEmailOrderReceived($order)
 	{
-		\App\Jobs\SendMailOrderReceived::dispatch($order, \Auth::user());
+		// \App\Jobs\SendMailOrderReceived::dispatch($order, \Auth::user());
 	}
 
 	/**

@@ -4492,9 +4492,6 @@ a.icon-cart-furniture span.green {
 .furniture-wishlist li a:hover {
     color: #00245b;
 }
-.slider-height-6 {
-    /* min-height: 790px; */
-}
 .furniture-content h2 {
     font-size: 72px;
     font-weight: bold;
@@ -6501,10 +6498,10 @@ a.icon-cart-furniture.food-cart span {
 
 /*------- 12. Breadcrumb style -------------*/
 .breadcrumb-content h2 {
-    color: #fff;
+    color: #00245b;
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     text-transform: capitalize;
 }
 .breadcrumb-content li {

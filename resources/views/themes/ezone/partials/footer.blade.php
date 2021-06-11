@@ -1,31 +1,31 @@
 <!-- footer area start -->
-<footer class="footer-area">
+<footer class="footer-area bg-white" id="footer">
     <div class="footer-top-area pt-70 pb-35 wrapper-padding-5">
         <div class="container-fluid">
             <div class="widget-wrapper">
-                <div class="footer-widget mb-30">
-                    <a href="#"><img src="{{ asset('themes/ezone/assets/img/logo/2.png') }}" alt=""></a>
+                <div class="footer-widget col-md-6">
+                    <a href="#"><img src="{{ asset('themes/ezone/assets/img/logo/logo.png') }}" style="max-width: 70%" alt=""></a>
                     <div class="footer-about-2">
                         <p>There are many variations of passages of Lorem Ipsum <br>the majority have suffered alteration in some form, by <br> injected humour</p>
                     </div>
                 </div>
-                <div class="footer-widget mb-30">
-                    <h3 class="footer-widget-title-5">Contact Info</h3>
+                <div class="footer-widget col-sm-6 mt-sm-3">
+                    <h3 class="footer-widget-title-5">Kontak</h3>
                     <div class="footer-info-wrapper-3">
                         <div class="footer-address-furniture">
                             <div class="footer-info-icon3">
-                                <span>Address: </span>
+                                <span>Alamat: </span>
                             </div>
                             <div class="footer-info-content3">
-                                <p>66 Sipu road Rampura Banasree <br>USA- 10800</p>
+                                <p>Jl. Sana 80, Nangkono, Konohagakure</p>
                             </div>
                         </div>
                         <div class="footer-address-furniture">
                             <div class="footer-info-icon3">
-                                <span>Phone: </span>
+                                <span>Telp./WA: </span>
                             </div>
                             <div class="footer-info-content3">
-                                <p>+8801 (33) 515609735 <br>+8801 (66) 223352333</p>
+                                <p>0812233523</p>
                             </div>
                         </div>
                         <div class="footer-address-furniture">
@@ -33,12 +33,12 @@
                                 <span>E-mail: </span>
                             </div>
                             <div class="footer-info-content3">
-                                <p><a href="#"> email@domain.com</a> <br><a href="#"> domain@mail.info</a></p>
+                                <p><a href="#"> email@domain.com</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="footer-widget mb-30">
+                {{-- <div class="footer-widget mb-30">
                     <h3 class="footer-widget-title-5">Newsletter</h3>
                     <div class="footer-newsletter-2">
                         <p>Send us your mail or next updates</p>
@@ -53,7 +53,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -62,7 +62,7 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <div class="copyright-furniture">
-                        <p>Copyright © <a href="https://hastech.company/">HasTech</a> 2018 . All Right Reserved.</p>
+                        <p><a href="#">VARIABLE - 2021</p>
                     </div>
                 </div>
             </div>

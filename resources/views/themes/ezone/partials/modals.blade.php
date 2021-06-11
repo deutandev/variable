@@ -1,4 +1,4 @@
-<!-- modal -->
+{{-- <!-- modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
 	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		<span class="pe-7s-close" aria-hidden="true"></span>
@@ -140,4 +140,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> --}}

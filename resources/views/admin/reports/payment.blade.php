@@ -13,7 +13,7 @@
 						@include('admin.reports.filter')
 						<table class="table table-bordered table-striped">
 							<thead>
-								<th>Order ID</th>
+								<th>ID Pemesanan</th>
 								<th>Date</th>
 								<th>Status</th>
 								<th>Amount</th>
@@ -34,7 +34,7 @@
 									</tr>
 								@empty
 									<tr>
-										<td colspan="8">No records found</td>
+										<td colspan="8">Data tidak ditemukan</td>
 									</tr>
 								@endforelse
 							</tbody>
