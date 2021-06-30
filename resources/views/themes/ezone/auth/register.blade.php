@@ -13,7 +13,7 @@
 		</div>
 	</div>
 	<!-- register-area start -->
-	<div class="register-area ptb-100">
+	<div class="register-area">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12 col-12 col-lg-12 col-xl-6 ml-auto mr-auto">

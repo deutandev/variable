@@ -1,5 +1,5 @@
 <!-- footer area start -->
-<footer class="footer-area bg-white" id="footer">
+<footer class="footer-area footer-bg-blu" id="footer">
     <div class="footer-top-area pt-70 pb-35 wrapper-padding-5">
         <div class="container-fluid">
             <div class="widget-wrapper">

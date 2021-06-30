@@ -4,15 +4,15 @@
 	<div class="p-5 judul" >
 		<div class="container-fluid">
 			<div class="breadcrumb-content text-center">
-				<h2>shop grid 3 column</h2>
-				<ul>
+				<h2>Produk</h2>
+				{{-- <ul>
 					<li><a href="#">home</a></li>
-					<li>shop grid 3 column</li>
-				</ul>
+					<li>Produk</li>
+				</ul> --}}
 			</div>
 		</div>
 	</div>
-	<div class="shop-page-wrapper shop-page-padding ptb-100">
+	<div class="shop-page-wrapper shop-page-padding">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-3">

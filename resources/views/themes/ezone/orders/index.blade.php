@@ -4,7 +4,7 @@
 	<div class="p-5 judul" >
 		<div class="container-fluid">
 			<div class="breadcrumb-content text-center">
-				<h2>Favorit</h2>
+				<h2>Daftar Pesanan</h2>
 				{{-- <ul>
 					<li><a href="{{ url('/') }}">home</a></li>
 					<li>my favorites</li>
@@ -12,7 +12,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="shop-page-wrapper shop-page-padding ptb-100">
+	<div class="shop-page-wrapper shop-page-padding">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-3">

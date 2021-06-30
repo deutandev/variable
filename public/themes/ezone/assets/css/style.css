@@ -1183,6 +1183,10 @@
 }
 
 /* 2.12 Footer style */
+.footer-bg-blu {
+    background-color: #8ae2ff;
+    margin-top: 100px;
+}
 
 .footer-widget {
     position: relative;

@@ -46,7 +46,7 @@
 				<div class="qwick-view-content">
 					<h3>{{ $product->name }}</h3>
 					<div class="price">
-						<span class="new">{{ number_format($product->priceLabel()) }}</span>
+						<span class="new">Rp{{ number_format($product->priceLabel()) }}</span>
 						{{-- <span class="old">$120.00  </span> --}}
 					</div>
 					<p>{{ $product->short_description }}</p>
@@ -55,11 +55,11 @@
 						@if ($product->configurable())
 							<div class="quick-view-select">
 								<div class="select-option-part">
-									<label>Size*</label>
+									<label>Ukuran</label>
 									{!! Form::select('size', $sizes , null, ['class' => 'select', 'placeholder' => '- Please Select -', 'required' => true]) !!}
 								</div>
 								<div class="select-option-part">
-									<label>Color*</label>
+									<label>Jumlah Wajah</label>
 									{!! Form::select('color', $colors , null, ['class' => 'select', 'placeholder' => '- Please Select -', 'required' => true]) !!}
 								</div>
 							</div>

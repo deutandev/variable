@@ -1,5 +1,5 @@
 <div class="shop-sidebar mr-50">
-    <form method="GET" action="{{ url('products')}}">
+    {{-- <form method="GET" action="{{ url('products')}}">
 		<div class="sidebar-widget mb-40">
 			<h3 class="sidebar-title">Filter by Price</h3>
 			<div class="price_filter">
@@ -15,11 +15,11 @@
 				</div>
 			</div>
 		</div>
-    </form>
+    </form> --}}
 
     @if ($categories)
 		<div class="sidebar-widget mb-45">
-			<h3 class="sidebar-title">Categories</h3>
+			<h3 class="sidebar-title">Kategori</h3>
 			<div class="sidebar-categories">
 				<ul>
 					@foreach ($categories as $category)
@@ -30,9 +30,9 @@
 		</div>
 	@endif
     
-    @if ($colors)
+    {{-- @if ($colors)
 		<div class="sidebar-widget sidebar-overflow mb-45">
-			<h3 class="sidebar-title">color</h3>
+			<h3 class="sidebar-title">Banyak Wajah per Frame</h3>
 			<div class="sidebar-categories">
 				<ul>
 					@foreach ($colors as $color)
@@ -54,5 +54,5 @@
 				</ul>
 			</div>
 		</div>
-	@endif
+	@endif --}}
 </div>

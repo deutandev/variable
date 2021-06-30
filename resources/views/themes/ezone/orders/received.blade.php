@@ -14,7 +14,7 @@
 		</div>
 	</div>
 	<!-- checkout-area start -->
-	<div class="cart-main-area  ptb-100">
+	<div class="cart-main-area">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -61,7 +61,7 @@
 								<tr>
 									<th>#</th>
 									<th>Item</th>
-									<th>Descripsin</th>
+									<th>Deskripsin</th>
 									<th>Jumlah</th>
 									<th>Harga item</th>
 									<th>Total</th>

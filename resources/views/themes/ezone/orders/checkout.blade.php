@@ -14,7 +14,7 @@
 		</div>
 	</div>
 	<!-- checkout-area start -->
-	<div class="checkout-area ptb-100">
+	<div class="checkout-area">
 		<div class="container">
 			@include('admin.partials.flash', ['$errors' => $errors])
 

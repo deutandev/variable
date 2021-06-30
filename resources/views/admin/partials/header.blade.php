@@ -21,7 +21,7 @@
 
               <div class="navbar-right ">
                 <ul class="nav navbar-nav">
-                  <li class="dropdown notifications-menu">
+                  {{-- <li class="dropdown notifications-menu">
                     <button class="dropdown-toggle" data-toggle="dropdown">
                       <i class="mdi mdi-bell-outline"></i>
                     </button>
@@ -61,15 +61,15 @@
                         <a class="text-center" href="#"> View All </a>
                       </li>
                     </ul>
-                  </li>
+                  </li> --}}
                   <!-- User Account -->
                   <li class="dropdown user-menu">
                     <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                      <img src="/admin/assets/img/user/user.png" class="user-image" alt="User Image" />
-                      <span class="d-none d-lg-inline-block">Abdus Salam</span>
+                      {{-- <img src="/admin/assets/img/user/user.png" class="user-image" alt="User Image" /> --}}
+                      <span class="d-none d-lg-inline-block">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-right">
-                      <!-- User image -->
+                      {{-- <!-- User image -->
                       <li class="dropdown-header">
                         <img src="/admin/assets/img/user/user.png" class="img-circle" alt="User Image" />
                         <div class="d-inline-block">
@@ -92,10 +92,10 @@
                       </li>
                       <li>
                         <a href="#"> <i class="mdi mdi-settings"></i> Account Setting </a>
-                      </li>
+                      </li> --}}
 
                       <li class="dropdown-footer">
-                        <a href="index.html"> <i class="mdi mdi-logout"></i> Log Out </a>
+                        <a href="{{ route('logout') }}"> <i class="mdi mdi-logout"></i> Log Out </a>
                       </li>
                     </ul>
                   </li>

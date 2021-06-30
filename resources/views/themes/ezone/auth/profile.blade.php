@@ -12,7 +12,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="shop-page-wrapper shop-page-padding ptb-100">
+	<div class="shop-page-wrapper shop-page-padding">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-3">

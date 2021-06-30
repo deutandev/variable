@@ -54,7 +54,7 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do tempor incididun ut labore et dolore magna aliqua. Ut enim ad mi , quis nostrud veniam exercitation .</p>
 						<div class="quick-view-select">
 							<div class="select-option-part">
-								<label>Size*</label>
+								<label>Ukuran</label>
 								<select class="select">
 									<option value="">- Please Select -</option>
 									<option value="">900</option>
@@ -62,7 +62,7 @@
 								</select>
 							</div>
 							<div class="select-option-part">
-								<label>Color*</label>
+								<label>Jumlah Wajah</label>
 								<select class="select">
 									<option value="">- Please Select -</option>
 									<option value="">orange</option>
