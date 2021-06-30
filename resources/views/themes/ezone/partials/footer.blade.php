@@ -6,7 +6,7 @@
                 <div class="footer-widget col-md-6">
                     <a href="#"><img src="{{ asset('themes/ezone/assets/img/logo/logo.png') }}" style="max-width: 70%" alt=""></a>
                     <div class="footer-about-2">
-                        <p>There are many variations of passages of Lorem Ipsum <br>the majority have suffered alteration in some form, by <br> injected humour</p>
+                        <p>Variable giftshop menawarkan produk-produk dengan desain kreatif <br>cocok sebagai hadiah kepada orang tercinta.</p>
                     </div>
                 </div>
                 <div class="footer-widget col-sm-6 mt-sm-3">
@@ -17,7 +17,7 @@
                                 <span>Alamat: </span>
                             </div>
                             <div class="footer-info-content3">
-                                <p>Jl. Sana 80, Nangkono, Konohagakure</p>
+                                <p>Jl. Adi Sucipto no. 154 Jajar, Surakarta</p>
                             </div>
                         </div>
                         <div class="footer-address-furniture">
@@ -25,7 +25,7 @@
                                 <span>Telp./WA: </span>
                             </div>
                             <div class="footer-info-content3">
-                                <p>0812233523</p>
+                                <p>+62 857-5835-4889</p>
                             </div>
                         </div>
                         <div class="footer-address-furniture">
@@ -33,7 +33,7 @@
                                 <span>E-mail: </span>
                             </div>
                             <div class="footer-info-content3">
-                                <p><a href="#"> email@domain.com</a></p>
+                                <p><a href="#"> ichwanjp@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
